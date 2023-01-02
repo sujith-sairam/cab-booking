@@ -1,8 +1,9 @@
-import './login.css';
+import './sign-in.css';
 
-function Login(){
+function SignIn(){
     return(
         <div>
+            <h2>Already have an Account</h2>
             <form>
                 <label>Email</label>
                 <input required
@@ -13,10 +14,9 @@ function Login(){
                 type='password'
                 />
                 <button>SIGN IN</button>
-                <button >SIGN UP</button>
             </form>
         </div>
     );
 }
 
-export default Login;
+export default SignIn;
