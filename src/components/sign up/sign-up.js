@@ -18,7 +18,7 @@ function SignUp(){
     const handleSubmit = async(event) =>{
         event.preventDefault();
 
-        if(password != confirmPassword){
+        if(password !== confirmPassword){
             alert('Password is not matched with Confirm Password');
             return ;
         }
@@ -28,7 +28,7 @@ function SignUp(){
             await createUserDocumentFromAuth(user,{displayName});
             resetFormFields();
         }catch(error){
-            if(error.code == 'auth/email-already-in-use'){
+            if(error.code === 'auth/email-already-in-use'){
                 alert("Account is already in use");
               }else{
               console.log('user creation error',error);
